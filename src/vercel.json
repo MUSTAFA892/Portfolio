@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "staticAssets": {
+      "Assets/Audio/03 Pink + White.mp3": {
+        "headers": {
+          "Content-Type": "audio/mpeg"
+        }
+      }
+    }
+  }
