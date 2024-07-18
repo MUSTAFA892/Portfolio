@@ -8,7 +8,6 @@ import { CgPlayButton } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
 import Sound from "../Assets/Audio/03 Pink + White.mp3";
 import {
-  AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,

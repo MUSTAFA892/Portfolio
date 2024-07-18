@@ -10,6 +10,7 @@ import Gesture from "../../Assets/Projects/gesture-removebg-preview.png"
 import Score from "../../Assets/Projects/score-removebg-preview.png"
 import you from "../../Assets/Projects/Untitled_design-removebg-preview.png"
 import port from "../../Assets/Projects/Untitled_design__1_-removebg-preview.png"
+import ipl from "../../Assets/Projects/Untitled_design__2_-removebg-preview.png"
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -105,6 +106,16 @@ function Projects() {
               title="Portfolio"
               description="Explore my digital portfolio, showcasing a curated selection of projects that demonstrate my skills and expertise in [specific areas of expertise]. From concept to delivery, see how I bring ideas to life and drive results."
               ghLink="https://github.com/MUSTAFA892/Portfolio"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ipl}
+              isBlog={false}
+              title="IPL APP"
+              description="Get live IPL scores, team & player info, winner predictions, and score forecasts. Stay updated with the latest cricket action!"
+              ghLink="https://github.com/MUSTAFA892/Portfolio"
+              demoLink="#"
             />
           </Col>
         </Row>
