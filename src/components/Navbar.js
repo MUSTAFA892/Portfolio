@@ -115,7 +115,7 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://soumyajitblogs.vercel.app/"
+                href="#"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -129,7 +129,7 @@ function NavBar() {
                 className="fork-btn-inner"
                 onClick={handleClick}
               >
-                <CgPlayButton style={{ fontSize: "1.2em" }} /> Fork on GitHub
+                <CgPlayButton style={{ fontSize: "1.2em" }} />
               </Button>
             </Nav.Item>
             <audio ref={audioRef} src={Sound} loop={true} preload="auto" />
