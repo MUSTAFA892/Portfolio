@@ -11,6 +11,7 @@ import Score from "../../Assets/Projects/score-removebg-preview.png"
 import you from "../../Assets/Projects/Untitled_design-removebg-preview.png"
 import port from "../../Assets/Projects/Untitled_design__1_-removebg-preview.png"
 import ipl from "../../Assets/Projects/Untitled_design__2_-removebg-preview.png"
+import todo from"../../Assets/Projects/Untitled_design__3_-removebg-preview.png"
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -62,8 +63,8 @@ function Projects() {
               isBlog={false}
               title="IPL Score Predictor"
               description="Utilize advanced analytics and historical data to forecast scores in IPL matches. Predict outcomes with precision using interactive tools, enhancing your cricket viewing experience with accurate score projections."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              ghLink="https://github.com/MUSTAFA892/IPL-Score-prediction-System"
+              demoLink="https://mustafa52.pythonanywhere.com/"
             />
           </Col>
 
@@ -75,6 +76,16 @@ function Projects() {
               description="Classic strategic game where players take turns marking spaces in a 3x3 grid, aiming to achieve a row, column, or diagonal of their symbol. Enjoy timeless fun and test your tactics in this engaging challenge."
               ghLink="https://github.com/MUSTAFA892/Tic-Tac-Toe"
               demoLink="https://tic-tac-toe-omega-ashen.vercel.app/" 
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={todo}
+              isBlog={false}
+              title="Todo App"
+              description="A sleek and intuitive task management tool that helps users organize their daily activities. Features include task creation, deadline management, priority setting, and progress tracking. Built with modern web technologies for a seamless user experience."
+              ghLink="https://github.com/MUSTAFA892/Todo-app---React"
+              demoLink="https://todo-app-react-wh8f.vercel.app/" 
             />
           </Col>
 
@@ -114,7 +125,7 @@ function Projects() {
               isBlog={false}
               title="IPL APP"
               description="Get live IPL scores, team & player info, winner predictions, and score forecasts. Stay updated with the latest cricket action!"
-              ghLink="https://github.com/MUSTAFA892/Portfolio"
+              ghLink="https://github.com/MUSTAFA892/IPL-APP"
               demoLink="#"
             />
           </Col>
