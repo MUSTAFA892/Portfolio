@@ -133,17 +133,6 @@ function NavBar() {
                 <ImBlog style={{ marginBottom: "2px" }} /> Blogs
               </Nav.Link>
             </Nav.Item>
-
-            <Nav.Item className="fork-btn">
-              <Button
-                variant="link"
-                className="fork-btn-inner"
-                onClick={handleClick}
-              >
-                <CgPlayButton style={{ fontSize: "1.2em" }} />
-            <audio ref={audioRef} src={Sound} loop={true} preload="auto" />
-              </Button>
-            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
