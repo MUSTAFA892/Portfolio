@@ -6,7 +6,10 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgPlayButton } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
-import Sound from "../Assets/Audio/03 Pink + White.mp3";
+import Sound from "./03 Pink + White.mp3";
+
+
+
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
