@@ -12,6 +12,7 @@ import you from "../../Assets/Projects/Untitled_design-removebg-preview.png"
 import port from "../../Assets/Projects/Untitled_design__1_-removebg-preview.png"
 import ipl from "../../Assets/Projects/Untitled_design__2_-removebg-preview.png"
 import todo from"../../Assets/Projects/Untitled_design__3_-removebg-preview.png"
+import chat from "../../Assets/Projects/Untitled_design__4_-removebg-preview.png"
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -112,6 +113,16 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={chat}
+              isBlog={false}
+              title="Chat App"
+              description="React chat app powered by Firebase.Real-time messaging with friends. Send text, images, and more. Easy-to-use interface for seamless communication. "
+              ghLink="https://github.com/MUSTAFA892/CHAT-APP-REACT"
+              demoLink="https://chat-app-react-beta.vercel.app/" 
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={port}
               isBlog={false}
               title="Portfolio"
@@ -126,7 +137,7 @@ function Projects() {
               title="IPL APP"
               description="Get live IPL scores, team & player info, winner predictions, and score forecasts. Stay updated with the latest cricket action!"
               ghLink="https://github.com/MUSTAFA892/IPL-APP"
-              demoLink="#"
+              demoLink="https://ipl-eq0rjr20f-mustafa892s-projects.vercel.app/"
             />
           </Col>
         </Row>
