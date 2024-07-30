@@ -17,6 +17,7 @@ import jarvis from "../../Assets/Projects/Screenshot_2024-07-29_135530-removebg-
 import video1 from "../../Assets/Video/Screen Recording 2024-07-29 133607.mp4"
 import video2 from "../../Assets/Video/Screen Recording 2024-07-29 170710.mp4"
 import dice from '../../Assets/Projects/Screenshot_2024-07-29_181843-removebg-preview.png'
+import music from "../../Assets/Projects/12-removebg-preview.png"
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -80,6 +81,16 @@ function Projects() {
               description="Dice Game is an interactive application that simulates rolling dice for various games and activities. It offers a virtual dice-rolling experience with customizable settings, enhancing gameplay and decision-making with realistic random number generation."
               ghLink="https://github.com/MUSTAFA892/Dice-Game---React"
               demoLink="https://dice-game-react-sigma.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={music}
+              isBlog={false}
+              title="Music App"
+              description="Discover and enjoy music with SoundWave—your personalized music hub. Search for tracks, explore top results, genre hits, and recently played songs, all enhanced with vibrant visuals and an intuitive interface for an immersive listening experience."
+              ghLink="https://github.com/MUSTAFA892/Music-APP-React"
+              demoLink="https://music-app-react-gold.vercel.app/"
             />
           </Col>
 
