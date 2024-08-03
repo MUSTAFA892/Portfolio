@@ -18,6 +18,7 @@ import video1 from "../../Assets/Video/Screen Recording 2024-07-29 133607.mp4"
 import video2 from "../../Assets/Video/Screen Recording 2024-07-29 170710.mp4"
 import dice from '../../Assets/Projects/Screenshot_2024-07-29_181843-removebg-preview.png'
 import music from "../../Assets/Projects/12-removebg-preview.png"
+import cricket from "../../Assets/Projects/Untitled_design__5_-removebg-preview.png"
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -154,6 +155,16 @@ function Projects() {
               description="Jarvis is an advanced personal assistant application designed to facilitate task management and improve productivity. Featuring voice recognition, natural language processing, and intuitive text-to-speech capabilities, Jarvis offers a hands-free and intelligent solution for managing daily activities and information retrieval. "
               ghLink="https://github.com/MUSTAFA892/JARVIS-FLASK"
               demoLink={video1}
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={cricket}
+              isBlog={false}
+              title="Cricket Run Calculator"
+              description="Jarvis is an advanced personal assistant application designed to facilitate task management and improve productivity. Featuring voice recognition, natural language processing, and intuitive text-to-speech capabilities, Jarvis offers a hands-free and intelligent solution for managing daily activities and information retrieval. "
+              ghLink="https://github.com/MUSTAFA892/Cricket-Run-Calculator"
+              demoLink= "https://cricket-run-calculator.vercel.app/"
             />
           </Col>
           <Col md={4} className="project-card">
