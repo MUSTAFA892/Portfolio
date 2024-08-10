@@ -2,76 +2,63 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
+
+// Importing project images and videos
 import emotion from "../../Assets/Projects/emotion.png";
-import text from "../../Assets/Projects/text-removebg-preview.png"
-import win from "../../Assets/Projects/win-removebg-preview.png"
-import tic from "../../Assets/Projects/tic-removebg-preview.png"
-import Gesture from "../../Assets/Projects/gesture-removebg-preview.png"
-import Score from "../../Assets/Projects/score-removebg-preview.png"
-import you from "../../Assets/Projects/Untitled_design-removebg-preview.png"
-import port from "../../Assets/Projects/Untitled_design__1_-removebg-preview.png"
-import ipl from "../../Assets/Projects/Untitled_design__2_-removebg-preview.png"
-import todo from"../../Assets/Projects/Untitled_design__3_-removebg-preview.png"
-import chat from "../../Assets/Projects/Untitled_design__4_-removebg-preview.png"
-import jarvis from "../../Assets/Projects/Screenshot_2024-07-29_135530-removebg-preview.png"
-import video1 from "../../Assets/Video/Screen Recording 2024-07-29 133607.mp4"
-import video2 from "../../Assets/Video/Screen Recording 2024-07-29 170710.mp4"
-import dice from '../../Assets/Projects/Screenshot_2024-07-29_181843-removebg-preview.png'
-import music from "../../Assets/Projects/12-removebg-preview.png"
-import cricket from "../../Assets/Projects/Untitled_design__5_-removebg-preview.png"
+import text from "../../Assets/Projects/text-removebg-preview.png";
+import win from "../../Assets/Projects/win-removebg-preview.png";
+import tic from "../../Assets/Projects/tic-removebg-preview.png";
+import Gesture from "../../Assets/Projects/gesture-removebg-preview.png";
+import Score from "../../Assets/Projects/score-removebg-preview.png";
+import you from "../../Assets/Projects/Untitled_design-removebg-preview.png";
+import port from "../../Assets/Projects/Untitled_design__1_-removebg-preview.png";
+import ipl from "../../Assets/Projects/Untitled_design__2_-removebg-preview.png";
+import todo from "../../Assets/Projects/Untitled_design__3_-removebg-preview.png";
+import chat from "../../Assets/Projects/Untitled_design__4_-removebg-preview.png";
+import jarvis from "../../Assets/Projects/Screenshot_2024-07-29_135530-removebg-preview.png";
+import video1 from "../../Assets/Video/Screen Recording 2024-07-29 133607.mp4";
+import video2 from "../../Assets/Video/Screen Recording 2024-07-29 170710.mp4";
+import dice from '../../Assets/Projects/Screenshot_2024-07-29_181843-removebg-preview.png';
+import music from "../../Assets/Projects/12-removebg-preview.png";
+import cricket from "../../Assets/Projects/Untitled_design__5_-removebg-preview.png";
+import sign from "../../Assets/Projects/Untitled_design__7_-removebg-preview.png"
+import encrypt from "../../Assets/Projects/Untitled_design__6_-removebg-preview.png"
+import piano_v from "../../Assets/Video/Screen Recording 2024-07-29 170710.mp4"
+import piano from "../../Assets/Projects/Untitled_design__8_-removebg-preview.png"
+
 function Projects() {
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My Recent <strong className="purple">Works</strong>
         </h1>
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
+        
+        {/* Beginner Projects */}
+        <h2 className="project-category" style={{color: "#c569f0", }}>Beginner</h2>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={text}
+              imgPath={tic}
               isBlog={false}
-              title="Text-Tweaker"
-              description=" Enhance, refine, and perfect your written content effortlessly. Edit text with precision, tweak sentences, and improve readability with intuitive tools. Ideal for writers, students, and professionals seeking polished and impactful communication."
-              ghLink="https://github.com/MUSTAFA892/Text-Tweaker/tree/master"
-              demoLink="https://mustafa892.github.io/Text-Tweaker/"
+              title="Tic Tac Toe"
+              description="Classic strategic game where players take turns marking spaces in a 3x3 grid, aiming to achieve a row, column, or diagonal of their symbol. Enjoy timeless fun and test your tactics in this engaging challenge."
+              ghLink="https://github.com/MUSTAFA892/Tic-Tac-Toe"
+              demoLink="https://tic-tac-toe-omega-ashen.vercel.app/"
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={Gesture}
+              imgPath={todo}
               isBlog={false}
-              title="Gesture Control"
-              description="Seamlessly control your cursor with left-hand gestures and effortlessly type using the keyboard with right-hand gestures. Enhance productivity and accessibility with intuitive hand gestures, perfect for streamlined navigation and interaction."
-              ghLink="https://github.com/MUSTAFA892/Gesture-Control"
-              demoLink={video2}
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={win}
-              isBlog={false}
-              title=" IPL Winner predictor"
-              description="Harness the power of Streamlit to forecast IPL match outcomes with precision. Analyze historical data, predict potential winners, and stay ahead in cricket's most exciting league using interactive and intuitive prediction tools."
-              ghLink="https://github.com/MUSTAFA892/Winner-System-Streamlit"
-              demoLink="https://iplwinner.streamlit.app/"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Score}
-              isBlog={false}
-              title="IPL Score Predictor"
-              description="Utilize advanced analytics and historical data to forecast scores in IPL matches. Predict outcomes with precision using interactive tools, enhancing your cricket viewing experience with accurate score projections."
-              ghLink="https://github.com/MUSTAFA892/IPL-Score-prediction-System"
-              demoLink="https://mustafa52.pythonanywhere.com/"
+              title="Todo App"
+              description="A sleek and intuitive task management tool that helps users organize their daily activities. Features include task creation, deadline management, priority setting, and progress tracking. Built with modern web technologies for a seamless user experience."
+              ghLink="https://github.com/MUSTAFA892/Todo-app---React"
+              demoLink="https://todo-app-react-wh8f.vercel.app/"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -84,6 +71,11 @@ function Projects() {
               demoLink="https://dice-game-react-sigma.vercel.app/"
             />
           </Col>
+        </Row>
+        
+        {/* Intermediate Projects */}
+        <h2 className="project-category" style={{color: "#c569f0", }}>Intermediate</h2>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={music}
@@ -94,67 +86,14 @@ function Projects() {
               demoLink="https://music-app-react-gold.vercel.app/"
             />
           </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={tic}
-              isBlog={false}
-              title="Tic Tac Toe"
-              description="Classic strategic game where players take turns marking spaces in a 3x3 grid, aiming to achieve a row, column, or diagonal of their symbol. Enjoy timeless fun and test your tactics in this engaging challenge."
-              ghLink="https://github.com/MUSTAFA892/Tic-Tac-Toe"
-              demoLink="https://tic-tac-toe-omega-ashen.vercel.app/" 
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={todo}
-              isBlog={false}
-              title="Todo App"
-              description="A sleek and intuitive task management tool that helps users organize their daily activities. Features include task creation, deadline management, priority setting, and progress tracking. Built with modern web technologies for a seamless user experience."
-              ghLink="https://github.com/MUSTAFA892/Todo-app---React"
-              demoLink="https://todo-app-react-wh8f.vercel.app/" 
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/MUSTAFA892/Face-and-emotion-Detector"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={you}
-              isBlog={false}
-              title="Youtube Video Summarizer"
-              description="Automate video summarization with our YouTube video summarizer! Get concise, 1-minute summaries of lengthy videos, saving you time and effort. Perfect for busy learners, researchers, and content creators."
-              ghLink="https://github.com/MUSTAFA892/Youtube-Video-Summarizer"
-              demoLink="https://videosummarizeer.streamlit.app/" 
-            />
-          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={chat}
               isBlog={false}
               title="Chat App"
-              description="React chat app powered by Firebase.Real-time messaging with friends. Send text, images, and more. Easy-to-use interface for seamless communication. "
+              description="React chat app powered by Firebase.Real-time messaging with friends. Send text, images, and more. Easy-to-use interface for seamless communication."
               ghLink="https://github.com/MUSTAFA892/CHAT-APP-REACT"
-              demoLink="https://chat-app-react-beta.vercel.app/" 
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={jarvis}
-              isBlog={false}
-              title="JARVIS"
-              description="Jarvis is an advanced personal assistant application designed to facilitate task management and improve productivity. Featuring voice recognition, natural language processing, and intuitive text-to-speech capabilities, Jarvis offers a hands-free and intelligent solution for managing daily activities and information retrieval. "
-              ghLink="https://github.com/MUSTAFA892/JARVIS-FLASK"
-              demoLink={video1}
+              demoLink="https://chat-app-react-beta.vercel.app/"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -162,9 +101,115 @@ function Projects() {
               imgPath={cricket}
               isBlog={false}
               title="Cricket Run Calculator"
-              description="Jarvis is an advanced personal assistant application designed to facilitate task management and improve productivity. Featuring voice recognition, natural language processing, and intuitive text-to-speech capabilities, Jarvis offers a hands-free and intelligent solution for managing daily activities and information retrieval. "
+              description="A tool for calculating cricket scores and runs."
               ghLink="https://github.com/MUSTAFA892/Cricket-Run-Calculator"
-              demoLink= "https://cricket-run-calculator.vercel.app/"
+              demoLink="https://cricket-run-calculator.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={encrypt}
+              isBlog={false}
+              title="Encryption and decryption"
+              description="This user-friendly application allows you to securely encrypt and decrypt text using popular cryptographic algorithms. Whether you need to protect sensitive information or securely share messages."
+              ghLink="https://github.com/MUSTAFA892/Encrypt-Decrypt-Binary-conveter-Streamlit"
+              demoLink="https://encrypt-decrypt-binary-conveter-app-w7cyymdpi7s8v24csjqvp3.streamlit.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={sign}
+              isBlog={false}
+              title="Signature App"
+              description="A Signature app to make digital signature and download the sign in PNG format."
+              ghLink="https://github.com/MUSTAFA892/Signature-App-React"
+              demoLink="https://todo-app-react-ten-delta.vercel.app/"
+            />
+          </Col>
+          
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={you}
+              isBlog={false}
+              title="YouTube Video Summarizer"
+              description="Automate video summarization with our YouTube video summarizer! Get concise, 1-minute summaries of lengthy videos, saving you time and effort. Perfect for busy learners, researchers, and content creators."
+              ghLink="https://github.com/MUSTAFA892/Youtube-Video-Summarizer"
+              demoLink="https://videosummarizeer.streamlit.app/"
+            />
+          </Col>
+        </Row>
+        
+        {/* Advanced Projects */}
+        <h2 className="project-category" style={{color: "#c569f0", }}>Advanced</h2>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={text}
+              isBlog={false}
+              title="Text-Tweaker"
+              description="Enhance, refine, and perfect your written content effortlessly. Edit text with precision, tweak sentences, and improve readability with intuitive tools. Ideal for writers, students, and professionals seeking polished and impactful communication."
+              ghLink="https://github.com/MUSTAFA892/Text-Tweaker/tree/master"
+              demoLink="https://mustafa892.github.io/Text-Tweaker/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={piano}
+              isBlog={false}
+              title="Piano - Pygame"
+              description="an interactive musical experience built using Pygame! This game offers a fun and engaging way to play and explore piano music directly from your computer. Whether you’re a seasoned pianist or a curious beginner, this game is designed to provide an enjoyable and educational experience with a virtual piano interface."
+              ghLink="https://github.com/MUSTAFA892/Piano-Pygame"
+              demoLink={piano_v}
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Gesture}
+              isBlog={false}
+              title="Gesture Control"
+              description="Seamlessly control your cursor with left-hand gestures and effortlessly type using the keyboard with right-hand gestures. Enhance productivity and accessibility with intuitive hand gestures, perfect for streamlined navigation and interaction."
+              ghLink="https://github.com/MUSTAFA892/Gesture-Control"
+              demoLink={video2}
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={win}
+              isBlog={false}
+              title="IPL Winner Predictor"
+              description="Harness the power of Streamlit to forecast IPL match outcomes with precision. Analyze historical data, predict potential winners, and stay ahead in cricket's most exciting league using interactive and intuitive prediction tools."
+              ghLink="https://github.com/MUSTAFA892/Winner-System-Streamlit"
+              demoLink="https://iplwinner.streamlit.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Score}
+              isBlog={false}
+              title="IPL Score Predictor"
+              description="Utilize advanced analytics and historical data to forecast scores in IPL matches. Predict outcomes with precision using interactive tools, enhancing your cricket viewing experience with accurate score projections."
+              ghLink="https://github.com/MUSTAFA892/IPL-Score-prediction-System"
+              demoLink="https://mustafa52.pythonanywhere.com/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={emotion}
+              isBlog={false}
+              title="Face Recognition and Emotion Detection"
+              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              ghLink="https://github.com/MUSTAFA892/Face-and-emotion-Detector"
+              // demoLink="To be added"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={jarvis}
+              isBlog={false}
+              title="JARVIS"
+              description="Jarvis is an advanced personal assistant application designed to facilitate task management and improve productivity. Featuring voice recognition, natural language processing, and intuitive text-to-speech capabilities, Jarvis offers a hands-free and intelligent solution for managing daily activities and information retrieval."
+              ghLink="https://github.com/MUSTAFA892/JARVIS-FLASK"
+              demoLink={video1}
             />
           </Col>
           <Col md={4} className="project-card">
