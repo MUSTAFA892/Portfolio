@@ -25,6 +25,8 @@ import sign from "../../Assets/Projects/Untitled_design__7_-removebg-preview.png
 import encrypt from "../../Assets/Projects/Untitled_design__6_-removebg-preview.png"
 import piano_v from "../../Assets/Video/Screen Recording 2024-07-29 170710.mp4"
 import piano from "../../Assets/Projects/Untitled_design__8_-removebg-preview.png"
+import flappy from "../../Assets/Projects/Untitled_design__10_-removebg-preview.png"
+import video3 from "../../Assets/Video/Screen Recording 2024-08-17 184033.mp4"
 
 function Projects() {
   return (
@@ -104,6 +106,16 @@ function Projects() {
               description="A tool for calculating cricket scores and runs."
               ghLink="https://github.com/MUSTAFA892/Cricket-Run-Calculator"
               demoLink="https://cricket-run-calculator.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={flappy}
+              isBlog={false}
+              title="Flappy"
+              description="A game which is developed using Pygame"
+              ghLink="https://github.com/MUSTAFA892/Flappy-Bird-Pygame"
+              demoLink={video3}
             />
           </Col>
           <Col md={4} className="project-card">
