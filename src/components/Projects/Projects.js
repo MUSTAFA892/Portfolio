@@ -29,6 +29,7 @@ import flappy from "../../Assets/Projects/Untitled_design__10_-removebg-preview.
 import video3 from "../../Assets/Video/Screen Recording 2024-08-17 184033.mp4"
 import license from "../../Assets/Projects/license (2).png"
 import video4 from "../../Assets/Video/license.mp4"
+import CreateSphere from "../../Assets/Projects/create.png"
 
 function Projects() {
   return (
@@ -161,6 +162,16 @@ function Projects() {
               demoLink="https://videosummarizeer.streamlit.app/"
             />
           </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={CreateSphere}
+              isBlog={false}
+              title="Create Sphere"
+              description="CreateSphere is an innovative platform designed to revolutionize how you generate content. With CreateSphere, you can effortlessly produce diverse and dynamic outputs by simply inputting text. Our cutting-edge technology transforms your written words into a variety of creative and functional outputs, from detailed articles and engaging stories to unique digital art and data-driven insights."
+              ghLink="https://github.com/MUSTAFA892/Create-Sphere---React"
+              demoLink="https://create-sphere-react.vercel.app/"
+            />
+          </Col>
         </Row>
         
         {/* Advanced Projects */}
@@ -194,6 +205,16 @@ function Projects() {
               description="Seamlessly control your cursor with left-hand gestures and effortlessly type using the keyboard with right-hand gestures. Enhance productivity and accessibility with intuitive hand gestures, perfect for streamlined navigation and interaction."
               ghLink="https://github.com/MUSTAFA892/Gesture-Control"
               demoLink={video2}
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath="#"
+              isBlog={false}
+              title="Synaptix"
+              description="Synaptix is the premier symposium event at KITE, where innovation and intellectual exploration converge. Designed to showcase the brightest minds and the latest advancements, Synaptix brings together students, faculty, and industry experts to share insights, discuss emerging trends, and inspire future breakthroughs"
+              ghLink="https://github.com/MUSTAFA892/Symposium-react"
+              demoLink="#"
             />
           </Col>
           <Col md={4} className="project-card">
