@@ -21,6 +21,7 @@ import video2 from "../../Assets/Video/Screen Recording 2024-07-29 170710.mp4";
 import dice from '../../Assets/Projects/Screenshot_2024-07-29_181843-removebg-preview.png';
 import music from "../../Assets/Projects/12-removebg-preview.png";
 import cricket from "../../Assets/Projects/Untitled_design__5_-removebg-preview.png";
+import spectra from "../../Assets/Projects/spectragenix-removebg-preview.png"
 import sign from "../../Assets/Projects/Untitled_design__7_-removebg-preview.png"
 import encrypt from "../../Assets/Projects/Untitled_design__6_-removebg-preview.png"
 import piano_v from "../../Assets/Video/Screen Recording 2024-07-29 170710.mp4"
@@ -207,16 +208,7 @@ function Projects() {
               demoLink={video2}
             />
           </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath="#"
-              isBlog={false}
-              title="Synaptix"
-              description="Synaptix is the premier symposium event at KITE, where innovation and intellectual exploration converge. Designed to showcase the brightest minds and the latest advancements, Synaptix brings together students, faculty, and industry experts to share insights, discuss emerging trends, and inspire future breakthroughs"
-              ghLink="https://github.com/MUSTAFA892/Symposium-react"
-              demoLink="#"
-            />
-          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={win}
@@ -274,6 +266,16 @@ function Projects() {
               description="Get live IPL scores, team & player info, winner predictions, and score forecasts. Stay updated with the latest cricket action!"
               ghLink="https://github.com/MUSTAFA892/IPL-APP"
               demoLink="https://ipl-eq0rjr20f-mustafa892s-projects.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={spectra}
+              isBlog={false}
+              title="Spectragenix'24"
+              description="SpectraGenix'24 is an interdisciplinary symposium that brings together thought leaders, innovators, students, and professionals to explore cutting-edge developments across a wide range of fields. From emerging technologies and scientific research to creative arts and social sciences, the symposium serves as a platform for intellectual exchange, collaboration, and inspiration."
+              ghLink="https://github.com/MUSTAFA892/Symposium-Flask"
+              demoLink="https://spectragenix24-symposium.onrender.com/"
             />
           </Col>
         </Row>
