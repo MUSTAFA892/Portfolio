@@ -31,6 +31,7 @@ import video3 from "../../Assets/Video/Screen Recording 2024-08-17 184033.mp4"
 import license from "../../Assets/Projects/license (2).png"
 import video4 from "../../Assets/Video/license.mp4"
 import CreateSphere from "../../Assets/Projects/create.png"
+import VideoCall from "../../Assets/Projects/2-removebg-preview.png"
 
 function Projects() {
   return (
@@ -171,6 +172,16 @@ function Projects() {
               description="CreateSphere is an innovative platform designed to revolutionize how you generate content. With CreateSphere, you can effortlessly produce diverse and dynamic outputs by simply inputting text. Our cutting-edge technology transforms your written words into a variety of creative and functional outputs, from detailed articles and engaging stories to unique digital art and data-driven insights."
               ghLink="https://github.com/MUSTAFA892/Create-Sphere---React"
               demoLink="https://create-sphere-react.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={VideoCall}
+              isBlog={false}
+              description = "FaceLink is your ultimate video calling solution, designed for seamless communication. Whether you're catching up with friends, collaborating with colleagues, or having an important one-on-one conversation, FaceLink provides crystal-clear video, reliable connectivity, and a user-friendly interface that makes staying connected easier than ever."
+              title="Face Link"
+              ghLink="https://github.com/MUSTAFA892/Video-Call-App-React"
+              demoLink="https://video-call-app-react-ckzs.vercel.app/"
             />
           </Col>
         </Row>
