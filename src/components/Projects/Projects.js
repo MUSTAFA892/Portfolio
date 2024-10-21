@@ -32,6 +32,7 @@ import license from "../../Assets/Projects/license (2).png"
 import video4 from "../../Assets/Video/license.mp4"
 import CreateSphere from "../../Assets/Projects/create.png"
 import VideoCall from "../../Assets/Projects/2-removebg-preview.png"
+import Calculator from "../../Assets/Projects/Cal phone.png"
 
 function Projects() {
   return (
@@ -182,6 +183,16 @@ function Projects() {
               title="Face Link"
               ghLink="https://github.com/MUSTAFA892/Video-Call-App-React"
               demoLink="https://video-call-app-react-ckzs.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Calculator}
+              isBlog={false}
+              description = "This Basic Calculator App is a simple and user-friendly tool designed to perform everyday arithmetic calculations. Built using React Native, the app is lightweight, fast, and works seamlessly on Android devices."
+              title="Calculator App"
+              ghLink="https://github.com/MUSTAFA892/Calculator-App-React-Native.git"
+              demoLink="https://drive.google.com/file/d/18iLi2-FqJBYHCeCjlpxaqM7IPpfKuYdJ/view?usp=sharing"
             />
           </Col>
         </Row>
