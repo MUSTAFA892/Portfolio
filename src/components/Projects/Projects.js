@@ -297,7 +297,7 @@ function Projects() {
               title="Spectragenix'24"
               description="SpectraGenix'24 is an interdisciplinary symposium that brings together thought leaders, innovators, students, and professionals to explore cutting-edge developments across a wide range of fields. From emerging technologies and scientific research to creative arts and social sciences, the symposium serves as a platform for intellectual exchange, collaboration, and inspiration."
               ghLink="https://github.com/MUSTAFA892/Symposium-Flask"
-              demoLink="https://spectragenix24-symposium.onrender.com/"
+              demoLink="https://ai-ds-web.onrender.com/"
             />
           </Col>
         </Row>
