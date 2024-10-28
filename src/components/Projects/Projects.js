@@ -33,6 +33,7 @@ import video4 from "../../Assets/Video/license.mp4"
 import CreateSphere from "../../Assets/Projects/create.png"
 import VideoCall from "../../Assets/Projects/2-removebg-preview.png"
 import Calculator from "../../Assets/Projects/Cal phone.png"
+import Weather from "../../Assets/Projects/weather app (2).png"
 
 function Projects() {
   return (
@@ -228,6 +229,16 @@ function Projects() {
               description="Seamlessly control your cursor with left-hand gestures and effortlessly type using the keyboard with right-hand gestures. Enhance productivity and accessibility with intuitive hand gestures, perfect for streamlined navigation and interaction."
               ghLink="https://github.com/MUSTAFA892/Gesture-Control"
               demoLink={video2}
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Weather}
+              isBlog={false}
+              title="Weather Wave"
+              description="Weather Wave is a dynamic weather application designed to provide users with real-time, accurate, and visually appealing weather updates. It offers essential weather details like current temperature, humidity, wind speed, and atmospheric pressure, along with more advanced insights such as hourly and weekly forecasts, radar maps, and severe weather alerts."
+              ghLink="https://github.com/MUSTAFA892/Weather-App-ReactNative-Expo/tree/main"
+              demoLink="https://expo.dev/accounts/mustafa1234567890/projects/WeatherWave/builds/e2339422-5b6a-48b2-ab6c-094fb578f233"
             />
           </Col>
 
