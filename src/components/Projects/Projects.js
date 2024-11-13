@@ -34,6 +34,7 @@ import CreateSphere from "../../Assets/Projects/create.png"
 import VideoCall from "../../Assets/Projects/2-removebg-preview.png"
 import Calculator from "../../Assets/Projects/Cal phone.png"
 import Weather from "../../Assets/Projects/weather app (2).png"
+import object from "../../Assets/Projects/object.png"
 
 function Projects() {
   return (
@@ -188,6 +189,16 @@ function Projects() {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={object}
+              isBlog={false}
+              description = "An Object Detection System using TensorFlow.js and React enables real-time identification and classification of objects within video frames captured through a webcam or camera feed. By integrating TensorFlow.js, a powerful JavaScript library for machine learning, we can run pre-trained models directly in the browser to detect objects in real-time."
+              title="Object Detection system"
+              ghLink="https://github.com/MUSTAFA892/Object-Detection-System-React-"
+              demoLink="https://object-detection-system-react.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={Calculator}
               isBlog={false}
               description = "This Basic Calculator App is a simple and user-friendly tool designed to perform everyday arithmetic calculations. Built using React Native, the app is lightweight, fast, and works seamlessly on Android devices."
@@ -308,7 +319,7 @@ function Projects() {
               title="Spectragenix'24"
               description="SpectraGenix'24 is an interdisciplinary symposium that brings together thought leaders, innovators, students, and professionals to explore cutting-edge developments across a wide range of fields. From emerging technologies and scientific research to creative arts and social sciences, the symposium serves as a platform for intellectual exchange, collaboration, and inspiration."
               ghLink="https://github.com/MUSTAFA892/Symposium-Flask"
-              demoLink="https://ai-ds-web.onrender.com/"
+              demoLink="https://symposium-flask-ub9h.onrender.com"
             />
           </Col>
         </Row>
