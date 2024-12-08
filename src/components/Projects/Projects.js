@@ -35,6 +35,7 @@ import VideoCall from "../../Assets/Projects/2-removebg-preview.png"
 import Calculator from "../../Assets/Projects/Cal phone.png"
 import Weather from "../../Assets/Projects/weather app (2).png"
 import object from "../../Assets/Projects/object.png"
+import Gym from "../../Assets/Projects/GYM.png"
 
 function Projects() {
   return (
@@ -240,6 +241,16 @@ function Projects() {
               description="Seamlessly control your cursor with left-hand gestures and effortlessly type using the keyboard with right-hand gestures. Enhance productivity and accessibility with intuitive hand gestures, perfect for streamlined navigation and interaction."
               ghLink="https://github.com/MUSTAFA892/Gesture-Control"
               demoLink={video2}
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Gym}
+              isBlog={false}
+              title="Gym App"
+              description="GymFlex is an innovative fitness app designed to revolutionize your workout and nutrition routine. Powered by advanced AI, GymFlex offers personalized workout plans, custom nutrition guidance, and powerful tracking features, all tailored to help you achieve your fitness goals. Whether you’re aiming to build muscle, lose weight, or simply live a healthier lifestyle, GymFlex adapts to your needs, helping you stay on track and reach new levels of fitness."
+              ghLink="https://github.com/MUSTAFA892/GYM_APPLICATION_REACT"
+              demoLink= ""
             />
           </Col>
           <Col md={4} className="project-card">
