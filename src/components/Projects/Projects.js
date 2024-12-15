@@ -36,6 +36,7 @@ import Calculator from "../../Assets/Projects/Cal phone.png"
 import Weather from "../../Assets/Projects/weather app (2).png"
 import object from "../../Assets/Projects/object.png"
 import Gym from "../../Assets/Projects/GYM.png"
+import sketch from "../../Assets/Projects/sketch.png"
 
 function Projects() {
   return (
@@ -203,9 +204,19 @@ function Projects() {
               imgPath={Calculator}
               isBlog={false}
               description = "This Basic Calculator App is a simple and user-friendly tool designed to perform everyday arithmetic calculations. Built using React Native, the app is lightweight, fast, and works seamlessly on Android devices."
-              title="Calculator App"
+              title="Calculator Android App"
               ghLink="https://github.com/MUSTAFA892/Calculator-App-React-Native.git"
               demoLink="https://drive.google.com/file/d/18iLi2-FqJBYHCeCjlpxaqM7IPpfKuYdJ/view?usp=sharing"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={sketch}
+              isBlog={false}
+              description = "he Sketch Calculator is an interactive and user-friendly tool integrated into the React app, designed to make basic calculations while providing a visual sketching interface. It allows users to perform standard arithmetic operations such as addition, subtraction, multiplication, and division, while also enabling them to sketch diagrams or draw simple visual representations that can assist in problem-solving or displaying calculations visually."
+              title="Sketch Calclator"
+              ghLink="https://github.com/MUSTAFA892/Sketch_Calculator_React-Vite"
+              demoLink=""
             />
           </Col>
         </Row>
