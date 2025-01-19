@@ -37,6 +37,7 @@ import Weather from "../../Assets/Projects/weather app (2).png"
 import object from "../../Assets/Projects/object.png"
 import Gym from "../../Assets/Projects/GYM.png"
 import sketch from "../../Assets/Projects/sketch.png"
+import repo from "../../Assets/Projects/repobattle.png"
 
 function Projects() {
   return (
@@ -217,6 +218,17 @@ function Projects() {
               title="Sketch Calclator"
               ghLink="https://github.com/MUSTAFA892/Sketch_Calculator_React-Vite"
               demoLink=""
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={repo}
+              isBlog={false}
+              description = "In this project, two AI-powered agents go head-to-head to analyze and critique each other's GitHub repositories. Using advanced natural language processing (NLP) and machine learning techniques, each AI reviews the other’s codebase, providing detailed feedback, funny commentary, and even roasting the code quality, documentation, and overall structure."
+              title="Github repo battle"
+              ghLink="https://github.com/MUSTAFA892/Github-repo-battle"
+              demoLink="https://github-repo-battle-i6kziley5-mustafa892s-projects.vercel.app/"
             />
           </Col>
         </Row>
