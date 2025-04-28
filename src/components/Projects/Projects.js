@@ -356,6 +356,36 @@ function Projects() {
               demoLink="https://symposium-flask-ub9h.onrender.com"
             />
           </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={spectra}
+              isBlog={false}
+              title="Resume-Analyzer"
+              description="Resume Analyzer is an AI-powered application that helps users enhance their resumes, discover local job opportunities, and prepare for technical interviews—all in one platform. When a user uploads their resume, the app intelligently analyzes its structure, content, and relevance, then provides personalized suggestions to improve and scale it for better job matching. It also features a location-based job recommendation system that connects users with opportunities nearby. Additionally, the built-in AI interview system conducts mock technical interviews, evaluates responses, and offers feedback to help users perform better in real interviews."
+              ghLink="https://github.com/MUSTAFA892/Resume-Analyzer"
+              demoLink="https://resume-analyzer-ntn9.onrender.com/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={spectra}
+              isBlog={false}
+              title="Meet-Sync"
+              description="Meet Sync is an AI-powered meeting assistant designed to record and transcribe entire meetings with high accuracy. After transcription, the assistant intelligently extracts key action items — such as emails, notes, to-dos, and web search tasks — and presents them to the user for review.Meet Sync is deeply integrated with our custom-built notes application, creating a powerful and private ecosystem for managing meeting outcomes. Together, they offer a unique blend of enhanced privacy, streamlined workflows, and maximum productivity."
+              ghLink="https://github.com/MUSTAFA892/Meet-Sync"
+              demoLink="https://meet-sync.onrender.com/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={spectra}
+              isBlog={false}
+              title="Crop-Wala"
+              description="Crop Wala is an innovative, tech-driven contract farming platform designed to directly connect farmers and buyers, eliminating middlemen and ensuring fair, transparent trade. Our system empowers farmers with assured contracts, giving them peace of mind and income security before they even sow the seeds."
+              ghLink="https://github.com/MUSTAFA892/cropwala"
+              demoLink="https://cropwala-ncsm.onrender.com/"
+            />
+          </Col>
         </Row>
       </Container>
     </Container>
