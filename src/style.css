@@ -18,10 +18,10 @@ body {
   cursor: url("image.png"), auto;
 }
 
-
 button, a {
   cursor: url("image-click.png"), auto;
 }
+
 p, input, textarea {
   cursor: url("image-text-cursor.png"), auto; /* Custom cursor for text */
 }
@@ -29,7 +29,6 @@ p, input, textarea {
 p:active, input:active, textarea:active {
   cursor: url("image-text-cursor.png"), text; /* Custom cursor when text is active */
 }
-
 
 .purple {
   color: var(--imp-text-color) !important;
@@ -40,7 +39,7 @@ button:focus {
 }
 
 /* --------- */
-/*  Preloader */
+/* Preloader */
 /* --------- */
 #preloader {
   position: fixed;
@@ -53,6 +52,7 @@ button:focus {
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
+  animation: pulse 2s ease-in-out infinite;
 }
 
 #preloader-none {
@@ -64,10 +64,15 @@ button:focus {
   height: 100vh;
 }
 
-/* --------- */
-/*Scrollbar   */
-/* --------- */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
 
+/* --------- */
+/* Scrollbar */
+/* --------- */
 ::-webkit-scrollbar {
   width: 7px;
 }
@@ -90,7 +95,7 @@ button:focus {
 }
 
 /* --------- */
-/* Navbar Section  */
+/* Navbar Section */
 /* --------- */
 .sticky {
   background-color: #1b1a2ea9 !important;
@@ -104,6 +109,7 @@ button:focus {
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
+  z-index: 1000 !important; /* Ensure navbar is above particles */
 }
 
 .navbar-toggler {
@@ -131,7 +137,6 @@ button:focus {
 
 .navbar-toggler span:nth-child(1),
 .navbar-toggler span:nth-child(3) {
-  transition: transform 0.35s ease-in-out !important;
   transition: transform 0.35s ease-in-out !important;
 }
 
@@ -167,6 +172,7 @@ button:focus {
     display: none !important;
   }
 }
+
 .navbar-brand {
   color: rgb(250, 250, 250) !important;
 }
@@ -180,10 +186,24 @@ button:focus {
   color: white !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
+  position: relative;
+  transition: color 0.3s ease !important;
 }
 
-.nav-link {
-  padding: 0.8rem 1rem !important;
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 1rem;
+  width: 0;
+  height: 5px;
+  border-radius: 16px;
+  background: #c95bf5;
+  transition: width 0.3s ease-out;
+}
+
+.nav-link:hover::after {
+  width: calc(100% - 2rem);
 }
 
 @media (max-width: 767px) {
@@ -226,45 +246,31 @@ button:focus {
 /* Home section */
 /* --------- */
 .wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.1s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  animation-duration: 2.1s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
   display: inline-block;
 }
 
 @keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  } /* Reset for the last half to pause */
-  100% {
-    transform: rotate(0deg);
-  }
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
+
 #tsparticles {
   position: fixed !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   width: 100%;
   height: 100%;
+  z-index: -10 !important; /* Place particles behind all content */
 }
 
 .home-header {
@@ -273,7 +279,7 @@ button:focus {
 
 .home-section {
   position: relative;
-  z-index: -1;
+  z-index: 1 !important; /* Ensure home section is above particles */
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
@@ -285,30 +291,101 @@ button:focus {
   padding: 9rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
+  z-index: 2 !important; /* Ensure content is above particles */
 }
 
 .heading {
   font-size: 2.4em !important;
   padding-left: 50px !important;
+  position: relative;
+  z-index: 2 !important; /* Ensure heading is above particles */
+}
+
+.heading::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  width: 60px;
+  height: 4px;
+  background: var(--imp-text-color);
+  transform: translateY(-50%);
+  animation: slide-in 1s ease-out;
+}
+
+@keyframes slide-in {
+  0% { width: 0; }
+  100% { width: 60px; }
 }
 
 .heading-name {
   font-size: 2.5em !important;
   padding-left: 45px !important;
+  z-index: 2 !important; /* Ensure heading is above particles */
 }
 
 .main-name {
   color: #cd5ff8;
+  position: relative;
+  z-index: 2 !important; /* Ensure name is above particles */
+}
+
+.main-name::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #cd5ff8;
+  transition: width 0.4s ease;
+}
+
+.main-name:hover::after {
+  width: 100%;
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
   color: #be6adf !important;
   font-weight: 600 !important;
+  text-shadow: 0 0 8px rgba(190, 106, 223, 0.5);
+  animation: glow-pulse 2s ease-in-out infinite;
+  z-index: 2 !important; /* Ensure Typewriter is above particles */
 }
+
+.Typewriter__wrapper:hover {
+  transform: scale(1.05) rotateX(5deg);
+}
+
+@keyframes glow-pulse {
+  0% { text-shadow: 0 0 8px rgba(190, 106, 223, 0.5); }
+  50% { text-shadow: 0 0 15px rgba(190, 106, 223, 0.8), 0 0 25px rgba(190, 106, 223, 0.4); }
+  100% { text-shadow: 0 0 8px rgba(190, 106, 223, 0.5); }
+}
+
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: #b562d6 !important;
+  text-shadow: 0 0 8px rgba(181, 98, 214, 0.5);
+  animation: flicker 3s infinite, blink 0.7s infinite;
+  z-index: 2 !important; /* Ensure cursor is above particles */
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 8px rgba(181, 98, 214, 0.5);
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+    text-shadow: 0 0 4px rgba(181, 98, 214, 0.3);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 @media (max-width: 767px) {
@@ -325,6 +402,16 @@ button:focus {
 .myAvtar {
   justify-content: center !important;
   padding-top: 9em !important;
+  perspective: 1000px;
+  z-index: 2 !important; /* Ensure avatar is above particles */
+}
+
+.myAvtar img {
+  transition: transform 0.5s ease;
+}
+
+.myAvtar img:hover {
+  transform: rotateX(10deg) rotateY(10deg);
 }
 
 @media (max-width: 767px) {
@@ -338,6 +425,7 @@ button:focus {
   position: relative;
   padding-bottom: 70px !important;
   padding-top: 70px !important;
+  z-index: 1 !important; /* Ensure section is above particles */
 }
 
 .home-about-description {
@@ -345,18 +433,21 @@ button:focus {
   padding-top: 100px !important;
   padding-bottom: 20px !important;
   text-align: center;
+  z-index: 2 !important; /* Ensure description is above particles */
 }
 
 .home-about-body {
   padding-top: 50px;
   font-size: 1.2em !important;
   text-align: left;
+  z-index: 2 !important; /* Ensure body is above particles */
 }
 
 .home-about-social {
   text-align: center !important;
   padding-top: 25px;
   color: white !important;
+  z-index: 2 !important; /* Ensure social section is above particles */
 }
 
 .home-about-social-links {
@@ -365,6 +456,7 @@ button:focus {
   display: inline-block !important;
   position: relative !important;
   padding-inline-start: 0 !important;
+  z-index: 2 !important; /* Ensure links are above particles */
 }
 
 .home-social-icons {
@@ -377,7 +469,8 @@ button:focus {
   line-height: 2em !important;
   background: rgba(255, 255, 255, 0.972) !important;
   border-radius: 50% !important;
-  transition: 0.5s !important;
+  transition: all 0.5s ease !important;
+  z-index: 2 !important; /* Ensure icons are above particles */
 }
 
 .home-social-icons::before {
@@ -389,7 +482,7 @@ button:focus {
   height: 100%;
   border-radius: 50%;
   background: #68187a;
-  transition: 0.5s;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
   transform: scale(0.9);
   z-index: -1;
 }
@@ -403,6 +496,7 @@ button:focus {
   color: #87209e;
   box-shadow: 0 0 5px #87209e;
   text-shadow: 0 0 2px #87209e;
+  transform: translateY(-5px);
 }
 
 .social-icons {
@@ -422,14 +516,17 @@ button:focus {
   background-color: rgb(10, 4, 22);
   bottom: 0 !important;
   padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+  padding-bottom: 8px !important;
+  z-index: 1 !important; /* Ensure footer is above particles */
 }
+
 .footer-copywright {
   text-align: center !important;
+  z-index: 2 !important; /* Ensure text is above particles */
 }
 
 .footer-body {
-  z-index: 1;
+  z-index: 2 !important; /* Ensure body is above particles */
   text-align: center !important;
 }
 
@@ -448,16 +545,20 @@ button:focus {
   color: white !important;
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
+  z-index: 2 !important; /* Ensure heading is above particles */
 }
+
 .footer-icons {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
   padding: 0 !important;
+  z-index: 2 !important; /* Ensure icons are above particles */
 }
 
 .blockquote-footer {
   color: #a588c0 !important;
 }
+
 /* --------- */
 /* Projects */
 /* --------- */
@@ -466,6 +567,7 @@ button:focus {
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
+  z-index: 1 !important; /* Ensure section is above particles */
 }
 
 .project-card {
@@ -474,6 +576,8 @@ button:focus {
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;
+  perspective: 1000px;
+  z-index: 2 !important; /* Ensure cards are above particles */
 }
 
 .project-card-view {
@@ -481,13 +585,38 @@ button:focus {
   color: white !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
-  transition: all 0.5s ease 0s !important;
+  transition: all 0.5s ease !important;
   height: 100% !important;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  z-index: 2 !important; /* Ensure card view is above particles */
 }
+
 .project-card-view:hover {
-  transform: scale(1.02) !important;
-  overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+  transform: translateY(-8px) rotateX(5deg) rotateY(5deg) !important;
+  box-shadow: 0 8px 16px rgba(119, 53, 136, 0.65) !important;
+}
+
+.project-card-view::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(199, 112, 240, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+.project-card-view:hover::before {
+  left: 125%;
 }
 
 .blog-card {
@@ -496,75 +625,135 @@ button:focus {
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;
+  perspective: 1000px;
+  z-index: 2 !important; /* Ensure cards are above particles */
 }
 
 .blog-card-view {
   background-color: transparent !important;
   box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
   color: white !important;
-  transition: all 0.5s ease 0s !important;
+  transition: all 0.5s ease !important;
   height: 100% !important;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  z-index: 2 !important; /* Ensure card view is above particles */
 }
 
-.blog-link {
+.blog-card-view:hover {
+  transform: translateY(-8px) rotateX(5deg) rotateY(5deg) !important;
+  box-shadow: 0 6px 12px rgba(155, 88, 173, 0.65) !important;
+}
+
+.blog-card-view::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(199, 112, 240, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+.blog-ink {
   color: white !important;
   text-decoration: none !important;
+  z-index: 2 !important; /* Ensure link is above particles */
 }
 
 .blog-link:hover {
   cursor: pointer !important;
-}
-
-.blog-card-view:hover {
-  transform: scale(1.02) !important;
-  overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
+  color: var(--imp-text-color) !important;
 }
 
 .card-img-top {
   padding: 20px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
+  transition: transform 0.4s ease !important;
+  z-index: 2 !important; /* Ensure image is above particles */
+}
+
+.card-img-top:hover {
+  transform: scale(1.1) rotate(2deg) !important;
 }
 
 .blog-img {
   padding: 0px !important;
   opacity: 0.8 !important;
   border-radius: 0px !important;
+  z-index: 2 !important; /* Ensure image is above particles */
 }
 
 .btn-primary {
   color: #fff !important;
   background-color: #623686 !important;
   border-color: #623686 !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 2 !important; /* Ensure button is above particles */
 }
 
 .btn-primary:hover {
   color: #fff !important;
   background-color: #6d20c5d7 !important;
   border-color: #6d20c5d7 !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 5px 10px rgba(199, 112, 240, 0.5) !important;
 }
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(199, 112, 240, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
 .project-heading {
   color: white !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
+  z-index: 2 !important; /* Ensure heading is above particles */
 }
 
 /* --------- */
 /* About */
 /* --------- */
-
 .about-section {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
+  z-index: 1 !important; /* Ensure section is above particles */
 }
 
 .tech-icons {
@@ -579,7 +768,35 @@ button:focus {
   display: table !important;
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
-  transition: all 0.4s ease 0s !important;
+  transition: all 0.4s ease !important;
+  position: relative;
+  z-index: 2 !important; /* Ensure icons are above particles */
+}
+
+.tech-icons:hover {
+  transform: scale(1.05) translateY(-5px) !important;
+  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  box-shadow: 0 8px 16px rgba(199, 112, 240, 0.5) !important;
+}
+
+.tech-icons::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(199, 112, 240, 0.3),
+    transparent
+  );
+  transition: top 0.5s ease;
+}
+
+.tech-icons:hover::before {
+  top: 100%;
 }
 
 @media (max-width: 767px) {
@@ -588,57 +805,60 @@ button:focus {
   }
 }
 
-.tech-icons:hover {
-  transform: scale(1.05) !important;
-  overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
-}
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;
+  z-index: 2 !important; /* Ensure images are above particles */
 }
 
 .quote-card-view {
   border: none !important;
   color: white !important;
   background-color: transparent !important;
+  z-index: 2 !important; /* Ensure card is above particles */
 }
 
 .about-activity {
   list-style: none !important;
   text-align: left !important;
   padding-left: 1px !important;
+  z-index: 2 !important; /* Ensure activity is above particles */
 }
 
 @media (max-width: 767px) {
   .about-img {
     padding-top: 0 !important;
+    z-index: 2 !important; /* Ensure image is above particles */
   }
 }
+
 /* --------- */
 /* Resume */
 /* --------- */
-
 .resume-section {
   position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
+  z-index: 1 !important; /* Ensure section is above particles */
 }
 
 .resume {
   padding-top: 50px;
   padding-bottom: 50px;
   justify-content: center;
+  z-index: 2 !important; /* Ensure resume is above particles */
 }
 
 .resume-left {
   padding-right: 80px !important;
+  z-index: 2 !important; /* Ensure left section is above particles */
 }
 
 .resume-right {
   padding-left: 80px !important;
+  z-index: 2 !important; /* Ensure right section is above particles */
 }
 
 @media (max-width: 767px) {
@@ -652,11 +872,13 @@ button:focus {
     padding-left: 15px !important;
   }
 }
+
 .resume .resume-title {
   font-size: 2em;
   font-weight: 700;
   padding-top: 30px;
   padding-bottom: 30px;
+  z-index: 2 !important; /* Ensure title is above particles */
 }
 
 .resume .resume-item {
@@ -664,6 +886,7 @@ button:focus {
   margin-top: -2px;
   border-left: 2px solid #8a49a8;
   position: relative;
+  z-index: 2 !important; /* Ensure item is above particles */
 }
 
 .resume .resume-item .resume-title {
@@ -674,16 +897,13 @@ button:focus {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
+  z-index: 2 !important; /* Ensure title is above particles */
 }
 
 .resume .resume-item ul {
   padding-left: 20px;
   text-align: justify;
-}
-
-.resume .resume-item ul li {
-  padding-bottom: 10px;
-  list-style: none;
+  z-index: 2 !important; /* Ensure list is above particles */
 }
 
 .resume .resume-item:last-child {
@@ -700,12 +920,21 @@ button:focus {
   top: 0;
   background: #fff;
   border: 2px solid #c569f0;
+  animation: pulse-dot 2s ease-in-out infinite;
+  z-index: 2 !important; /* Ensure dot is above particles */
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
 }
 
 .like-item {
   padding-top: 10px !important;
   font-size: 1.1em !important;
   font-family: sans-serif !important;
+  z-index: 2 !important; /* Ensure item is above particles */
 }
 
 .like-btn {
@@ -714,13 +943,38 @@ button:focus {
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
   line-height: 1.4 !important;
-  transition: 0.3s ease !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 2 !important; /* Ensure button is above particles */
 }
 
 .like-btn:hover {
   transform: translateY(-2px) !important;
   background-color: #a24dd386 !important;
   border-color: #a24dd386 !important;
+  box-shadow: 0 5px 10px rgba(199, 112, 240, 0.5) !important;
+}
+
+.like-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(199, 112, 240, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+
+.like-btn:hover::before {
+  left: 100%;
 }
 
 .animate-like {
@@ -728,18 +982,16 @@ button:focus {
   animation-fill-mode: forwards;
   animation-duration: 0.85s;
 }
+
 @keyframes likeAnimation {
-  0% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1.5); }
+  100% { transform: scale(1); }
 }
 
 .fork-btn {
   font-size: 1.1em !important;
   padding-top: 10px !important;
+  z-index: 2 !important; /* Ensure button is above particles */
 }
 
 .fork-btn-inner {
@@ -748,13 +1000,39 @@ button:focus {
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 2 !important; /* Ensure inner button is above particles */
 }
 
 .fork-btn-inner:hover {
   transform: translateY(-2px) !important;
   background-color: #a24dd386 !important;
   border-color: #a24dd386 !important;
+  box-shadow: 0 5px 10px rgba(199, 112, 240, 0.5) !important;
 }
+
+.fork-btn-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(199, 112, 240, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+
+.fork-btn-inner:hover::before {
+  left: 100%;
+}
+
 .fork-btn-inner::after {
   display: none !important;
 }
