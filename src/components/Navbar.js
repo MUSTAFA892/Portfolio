@@ -135,9 +135,9 @@ function NavBar() {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link
-                href="https://chatbot-two-blush.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
+                as={Link}
+                to="/chatbot"
+                onClick={() => updateExpanded(false)}
               >
                 <ImBlog style={{ marginBottom: "2px" }} /> AskBot
               </Nav.Link>
