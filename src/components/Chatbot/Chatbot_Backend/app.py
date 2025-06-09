@@ -10,7 +10,7 @@ CORS(app)
 chat_history = []
 
 # Load FAQs from CSV
-def load_faq_from_csv(filename='Data.csv'):
+def load_faq_from_csv(filename='Data/Data.csv'):
     faq_dict = {}
     with open(filename, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
