@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import csv
 import re
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -9,7 +10,7 @@ CORS(app)
 chat_history = []
 
 # Load FAQs from CSV
-def load_faq_from_csv(filename='Data/Data.csv'):
+def load_faq_from_csv(filename='Data.csv'):
     faq_dict = {}
     with open(filename, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
@@ -54,4 +55,6 @@ def history():
     return jsonify(chat_history)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    host = os.getenv("FLASK_HOST", "0.0.0.0")  # Default is 0.0.0.0 (accessible from other devices)
+    port = int(os.getenv("PORT", 5000))  # Default port 5000
+    app.run(debug=True, host=host, port=port)
