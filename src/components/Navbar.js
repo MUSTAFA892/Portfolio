@@ -6,8 +6,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgPlayButton } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
-
-
+import { ImBubbles2, ImEnvelop } from "react-icons/im";
 
 
 import {
@@ -120,7 +119,7 @@ function NavBar() {
                 to="/Contact"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Contact
+                <ImEnvelop style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
             </Nav.Item>
 
@@ -139,7 +138,7 @@ function NavBar() {
                 to="/chatbot"
                 onClick={() => updateExpanded(false)}
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> AskBot
+                <ImBubbles2 style={{ marginBottom: "2px" }} /> AskBot
               </Nav.Link>
             </Nav.Item>
           </Nav>

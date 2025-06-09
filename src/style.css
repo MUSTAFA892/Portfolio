@@ -301,17 +301,7 @@ button:focus {
   z-index: 2 !important; /* Ensure heading is above particles */
 }
 
-.heading::before {
-  content: '';
-  position: absolute;
-  left: 30px;
-  top: 50%;
-  width: 60px;
-  height: 4px;
-  background: var(--imp-text-color);
-  transform: translateY(-50%);
-  animation: slide-in 1s ease-out;
-}
+
 
 @keyframes slide-in {
   0% { width: 0; }
