@@ -262,7 +262,6 @@
     transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     background: transparent;
     color: white;
-    cursor: url("../../image-text-cursor.png"), auto;
 }
 
 @media (max-width: 767px) {
@@ -283,7 +282,6 @@
     color: white;
     border: none;
     border-radius: 6px;
-    cursor: url("../../image-click.png"), auto;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     display: flex;
     align-items: center;

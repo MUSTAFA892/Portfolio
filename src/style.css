@@ -14,21 +14,7 @@ html {
   --imp-text-color: #c770f0;
 }
 
-body {
-  cursor: url("image.png"), auto;
-}
 
-button, a {
-  cursor: url("image-click.png"), auto;
-}
-
-p, input, textarea {
-  cursor: url("image-text-cursor.png"), auto; /* Custom cursor for text */
-}
-
-p:active, input:active, textarea:active {
-  cursor: url("image-text-cursor.png"), text; /* Custom cursor when text is active */
-}
 
 .purple {
   color: var(--imp-text-color) !important;

@@ -7,7 +7,8 @@ import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import Contact from "./components/Contact/Contact";
-import Chatbot from "./components/Chatbot/chatbot"
+import Chatbot from "./components/Chatbot/chatbot";
+import CursorFollower from "./components/CursorFollow/SmoothCursorFollower"; // 👈 Add this line
 import {
   BrowserRouter as Router,
   Route,
@@ -34,6 +35,7 @@ function App() {
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <CursorFollower /> {/* 👈 Add this line to render the trailing cursor */}
         <Navbar />
         <ScrollToTop />
         <Routes>
@@ -42,8 +44,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-          <Route path='/chatbot' element={<Chatbot />} />
+          <Route path="/chatbot" element={<Chatbot />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
       </div>

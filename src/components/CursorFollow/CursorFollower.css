@@ -1,0 +1,24 @@
+.cursor-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: rgba(199, 112, 240, 0.3);
+    border: 2.5px solid #c770f0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(199, 112, 240, 0.7);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Center with transform in JS */
+    will-change: transform;
+  }
+  
+  /* Optional: Scale up on click or hover (can be enabled later) */
+  .cursor-follower.active {
+    background-color: rgba(199, 112, 240, 0.6);
+    box-shadow: 0 0 25px rgba(199, 112, 240, 1);
+    transform: scale(1.3);
+  }
+  
