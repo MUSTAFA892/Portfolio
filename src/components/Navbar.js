@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgPlayButton } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
+import { FaHandshake } from "react-icons/fa";
 import { ImBubbles2, ImEnvelop } from "react-icons/im";
 
 
@@ -101,6 +102,16 @@ function NavBar() {
                   style={{ marginBottom: "2px" }}
                 />{" "}
                 Projects
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/works"
+                onClick={() => updateExpanded(false)}
+              >
+              <FaHandshake style={{ marginBottom: "2px" }} /> Client Projects
               </Nav.Link>
             </Nav.Item>
 
