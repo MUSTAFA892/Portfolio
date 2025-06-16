@@ -2,12 +2,15 @@ name: Keep Render Backend Alive
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # every 5 minutes
-  workflow_dispatch:      # allows manual trigger
+    - cron: "*/7 * * * *"  # every 7 minutes
+  workflow_dispatch:       # allows manual trigger
 
 jobs:
   ping-backend:
     runs-on: ubuntu-latest
     steps:
-      - name: Curl your Render backend
-        run: curl -s https://portfolio-zbe2.onrender.com > /dev/null
+      - name: Curl your Render backend with custom header and timestamp
+        run: |
+          curl -s -H "X-Keep-Alive: true" \
+               "https://portfolio-zbe2.onrender.com/ping?cachebust=$(date +%s)" \
+               > /dev/null
