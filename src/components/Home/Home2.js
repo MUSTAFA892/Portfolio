@@ -7,6 +7,8 @@ import {
   AiFillInstagram,
   AiFillLinkedin
 } from "react-icons/ai";
+import { FaCode } from "react-icons/fa";
+
 
 
 function Home2() {
@@ -75,6 +77,17 @@ function Home2() {
                   <AiFillLinkedin />
                 </a>
               </li>
+              <li className="social-icons">
+                <a
+                  href="https://leetcode.com/mustafatinwala6"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <FaCode />
+                </a>
+              </li>
+
             </ul>
           </Col>
         </Row>

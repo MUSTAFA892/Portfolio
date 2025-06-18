@@ -5,6 +5,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 
 function Footer() {
   let date = new Date();
@@ -50,6 +51,18 @@ function Footer() {
                 <AiFillInstagram />
               </a>
             </li>
+            <li className="social-icons">
+              <a
+                href="https://leetcode.com/mustafatinwala6"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+                
+              >
+                <FaCode />
+              </a>
+            </li>
+
           </ul>
         </Col>
       </Row>
